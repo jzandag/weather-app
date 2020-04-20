@@ -22,7 +22,7 @@ weatherform.addEventListener('submit', (e)=> {
     else
         search.classList.remove('error')
 
-    fetch('http://localhost:3000/weather?address='+ loc).then((result) => {
+    fetch('/weather?address='+ loc).then((result) => {
         result.json().then((result) => {
             messageBox.textContent = ''
             if(result.error)
