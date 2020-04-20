@@ -26,10 +26,20 @@ header{
     margin-top: 16px;
     margin-bottom: 48px;
 }
-
+header img{
+    display: inline;
+}
+.clearfix{
+    overflow: auto;
+}
 header h1{
+    display: inline;
     font-size: 50px;
-    margin-bottom: 16px;
+}
+header .links{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
 }
 
 header a{
