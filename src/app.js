@@ -35,8 +35,8 @@ app.get('/about', (req,res)=> {
 
 app.get('/help', (req,res)=> {
     res.render('help', {
-        message: 'We help each other because of the different reasons. Some people help, because they just cannot not to help the other people if they need help. The other people help, because they wish to give some positive energy or just because they must help. ',
-        message2: 'Sometimes we can help the others, because we are sure, that they will think in a good way about as after that. We need to improve our health, and to be sure, that someone needs us. When we help, we also get the real benefits to our health. Are you interested in it.',
+        message: 'If you decided to help someone, you cannot stop on the half of the way. You need to be sure that that the changes appeared and your words were not empty. People will be grateful to you for your help and will appreciate your efforts and time you spent.',
+        message2: 'It is possible to get a lot of friends if you help other people. This fact is very important for our health. The researches showed, that the loneliness has negative influence on our blood pressure and the risk of the heart attacks will be increased. People, which know, that there are their friends that can help them, live longer than people which do not have friends or family. Are you interested in it.',
         title: 'Help',
         name: 'Zidrex'
     });
