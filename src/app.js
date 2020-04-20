@@ -56,7 +56,7 @@ app.get('/weather', (req,res) => {
             });
         }else{
             
-            forecast(longitude, latitude, (error, {temperature: temp, humidity: hmd} = {}) => {
+            forecast(longitude, latitude, (error, {temperature: temp, humidity: hmd, icon, desc} = {}) => {
                 if(error)
                     return res.send({
                         error: 'Error in parsing results'
@@ -72,7 +72,9 @@ app.get('/weather', (req,res) => {
                         latitude,
                         placeName,
                         temp,
-                        hmd
+                        hmd,
+                        icon,
+                        desc
                     })
                 }
             })

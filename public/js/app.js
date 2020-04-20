@@ -14,6 +14,7 @@ weatherform.addEventListener('submit', (e)=> {
     const loc = search.value
     errorBox.textContent = ''
     messageBox.textContent = 'Loading...'
+    document.querySelector('.weather-icon').setAttribute('src','')
     if(!loc){
         errorBox.textContent = 'Please provide address!!'
         messageBox.textContent = ''
@@ -34,7 +35,9 @@ weatherform.addEventListener('submit', (e)=> {
                     Place: ${result.placeName} <br/>
                     Temperature is ${result.temp} <br/>
                     Humidity is ${result.hmd} <br/>
+                    Status: ${result.desc}
                 `
+                document.querySelector('.weather-icon').setAttribute('src', result.icon)
             }
         }).catch((err) => {
             

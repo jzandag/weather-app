@@ -12,11 +12,13 @@ const forecast = (long, lang, callback) => {
         if(res.error){
             callback('Cant locate query...')
         }else{
-            const {temperature, humidity} = res.current
+            const {temperature, humidity, weather_icons, weather_descriptions} = res.current
             console.log(`It is currently ${temperature} degree out. There is ${humidity}% humidity.`)
             callback(undefined, {
-                temperature: temperature,
-                humidity: humidity
+                        temperature: temperature,
+                humidity: humidity,
+                icon: weather_icons[0],
+                desc: weather_descriptions[0]
             })
         }
     }).catch((err) => {
